@@ -32,7 +32,7 @@
     "url": "https://github.com/reduxjs/redux-devtools.git"
   },
   "scripts": {
-    "build": "pnpm run build:cjs && pnpm run build:esm && pnpm run build:types && pnpm run build:umd",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:types && npm run build:umd",
     "build:cjs": "babel src --extensions \".ts,.tsx\" --out-dir lib/cjs",
     "build:esm": "babel src --config-file ./babel.config.esm.json --extensions \".ts,.tsx\" --out-dir lib/esm",
     "build:types": "tsc --emitDeclarationOnly",
@@ -41,8 +41,8 @@
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
     "type-check": "tsc --noEmit",
-    "prepack": "pnpm run clean && pnpm run build",
-    "prepublish": "pnpm run type-check && pnpm run lint && pnpm run test"
+    "prepack": "npm run clean && npm run build",
+    "prepublish": "npm run type-check && npm run lint && npm run test"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.6",
